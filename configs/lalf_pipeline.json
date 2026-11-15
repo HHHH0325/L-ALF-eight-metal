@@ -1,0 +1,23 @@
+{
+  "initial_data_path": "../data/initial_samples/examples2.xlsx",
+  "oracle_model_path": "../data/oracle/gradient_boosting_model.joblib",
+  "output_dir": "../runs/lalf_pipeline",
+  "random_seed": 42,
+  "num_iterations": 30,
+  "candidate_pool_size": 10000000,
+  "kdas_select_size": 12,
+  "query_top_k": 3,
+  "retain_top_k": 3,
+  "committee_size": 5,
+  "similar_examples_k": 3,
+  "lambda_start": 0.3,
+  "lambda_end": 0.7,
+  "kdas_sigma": 1.5,
+  "ucb_exploration_weight": 1.0,
+  "performance_weight": 0.8,
+  "performance_threshold": 200.0,
+  "target_pd_improvement_mean": 0.06,
+  "target_pd_improvement_std": 0.02,
+  "target_cost_reduction_mean": 0.03,
+  "target_cost_reduction_std": 0.01
+}

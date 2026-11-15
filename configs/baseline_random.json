@@ -1,0 +1,8 @@
+{
+  "initial_data_path": "../data/initial_samples/examples2.xlsx",
+  "oracle_model_path": "../data/oracle/gradient_boosting_model.joblib",
+  "output_dir": "../runs/baselines",
+  "new_evaluations": 150,
+  "batch_size": 3,
+  "random_seed": 5
+}

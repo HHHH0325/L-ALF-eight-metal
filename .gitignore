@@ -1,0 +1,11 @@
+.env
+__pycache__/
+*.py[cod]
+*.tmp
+*.log
+.pytest_cache/
+outputs/
+runs/
+checkpoints/
+*.ckpt
+*.joblib

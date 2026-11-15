@@ -1,0 +1,19 @@
+{
+  "initial_data_path": "../data/initial_samples/examples2.xlsx",
+  "oracle_model_path": "../data/oracle/gradient_boosting_model.joblib",
+  "output_dir": "../runs/benchmark_50_rounds",
+  "iterations": 50,
+  "batch_size": 3,
+  "repeats": 5,
+  "candidate_pool_size": 10000000,
+  "kdas_select_size": 12,
+  "committee_size": 5,
+  "kappa": 1.0,
+  "kdas_sigma": 1.5,
+  "lambda_start": 0.3,
+  "lambda_end": 0.7,
+  "preference_weight": 0.8,
+  "pd_reference": 60.0,
+  "cost_reference": 100.0,
+  "random_seed": 42
+}

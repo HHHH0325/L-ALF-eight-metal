@@ -1,0 +1,7 @@
+Design an eight-metal catalyst composition in this exact element order:
+[Pd, Pt, Cu, Au, Ir, Ce, Nb, Cr].
+The entries must be non-negative mass fractions summing to 1.
+Try to achieve power density >= {target_pd:.4f} and normalized cost <= {target_cost:.4f}.
+Known reference compositions:
+{references}
+Return only one bracketed vector with eight numbers.
