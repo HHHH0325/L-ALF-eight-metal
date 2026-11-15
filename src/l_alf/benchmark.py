@@ -245,7 +245,7 @@ def _generate_target(mode: str, history: list[dict[str, Any]], provider: DesignP
         cost_drop = abs(rng.normal(0.03, 0.01))
         target = provider.generate_ratio(leader["power_density"] * (1.0 + pd_gain),
                                          max(leader["cost"] * (1.0 - cost_drop), 0.1),
-                                         references[:8])
+                                         references[:5])
         return normalize_ratio(target)
     if mode == "local":
         # Weight-aware anchor: use only already observed history labels.

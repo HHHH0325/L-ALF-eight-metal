@@ -63,7 +63,7 @@ class OpenAIProvider:
 
     def generate_ratio(self, target_pd: float, target_cost: float, references: list[dict]) -> list[float]:
         reference_lines = []
-        for item in references[:8]:
+        for item in references[:5]:
             ratio = item.get("catalyst_ratio", item.get("ratio"))
             cost = item.get("normalized_cost", item.get("cost"))
             if ratio is None or cost is None:
