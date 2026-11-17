@@ -82,7 +82,9 @@ class CatalystActiveLearningPipeline:
         for iteration_index in range(self.config.num_iterations):
             iteration = iteration_index + 1
             lambda_value = self._current_lambda(iteration_index)
-            references = sort_reference_examples(self.examples)
+            references = sort_reference_examples(
+                self.examples, front_limit=3, non_front_limit=2
+            )
             target_pd, target_cost = calculate_targets(self.examples, self.config, self.rng)
 
             generated_ratio = self.provider.generate_ratio(target_pd, target_cost, references)

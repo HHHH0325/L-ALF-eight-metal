@@ -239,7 +239,7 @@ def _generate_target(mode: str, history: list[dict[str, Any]], provider: DesignP
     if mode == "llm":
         if provider is None:
             raise RuntimeError("LLM 方法需要 API；请先配置 .env")
-        references = sort_reference_examples(history, front_limit=4)
+        references = sort_reference_examples(history, front_limit=3, non_front_limit=2)
         leader = max(references, key=lambda x: x["power_density"])
         pd_gain = abs(rng.normal(0.06, 0.02))
         cost_drop = abs(rng.normal(0.03, 0.01))

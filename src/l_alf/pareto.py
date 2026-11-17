@@ -16,7 +16,10 @@ def pareto_mask_minimize(values: np.ndarray) -> np.ndarray:
     return mask
 
 
-def sort_reference_examples(examples: list[dict], front_limit: int = 4) -> list[dict]:
+def sort_reference_examples(
+    examples: list[dict], front_limit: int = 3, non_front_limit: int = 2
+) -> list[dict]:
+    """Return the top Pareto references followed by the top non-Pareto references."""
     if not examples:
         return []
     objectives = np.asarray(
@@ -34,11 +37,7 @@ def sort_reference_examples(examples: list[dict], front_limit: int = 4) -> list[
         key=lambda item: item["power_density"],
         reverse=True,
     )
-    return front[:front_limit] + sorted(
-        front[front_limit:] + non_front,
-        key=lambda item: item["power_density"],
-        reverse=True,
-    )
+    return front[:front_limit] + non_front[:non_front_limit]
 
 
 def calculate_targets(examples: list[dict], config, rng: np.random.Generator) -> tuple[float, float]:
