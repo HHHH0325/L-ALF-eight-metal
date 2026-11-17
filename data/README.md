@@ -16,9 +16,6 @@ summary, candidate summaries, and manuscript Table 1.
   test compositions at `k_added` checkpoints 0, 3, 6, 12, 24, 45, and 90.
   Each value is summarized by mean and sample SD across five repeats;
   `history_size` equals 10 plus `k_added`.
-- `candidate_summary/max_power_cost_62_335.json` and
-  `candidate_summary/closest_to_75_073.json` contain saved predictions, costs,
-  and full-precision compositions.
 - `table1.csv` contains the ten manuscript Table 1 rows. Composition columns
   follow `[Pd, Pt, Cu, Au, Ir, Ce, Nb, Cr]`; the manuscript reports three
   decimal places.
